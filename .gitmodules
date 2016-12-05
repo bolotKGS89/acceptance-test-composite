@@ -1,0 +1,9 @@
+[submodule "extends"]
+	path = extends
+	url = git@github.com:CloudCoreo/vpc-network-only.git
+[submodule "stack-servers-tomcat/extends"]
+	path = stack-servers-tomcat/extends
+	url = git@github.com:CloudCoreo/servers-tomcat.git
+[submodule "stack-audit-aws-cloudtrail/extends"]
+	path = stack-audit-aws-cloudtrail/extends
+	url = git@github.com:CloudCoreo/audit-aws-cloudtrail.git
