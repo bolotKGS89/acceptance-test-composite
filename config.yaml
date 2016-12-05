@@ -2,7 +2,7 @@ variables:
     VPC_NAME:
         required: true
         description: the name of the VPC
-        default: test-vpc
+        default: acceptance-test-vpc
     VPC_OCTETS:
         required: true
         description: the /16 net of the VPC to look for - i.e 10.11.0.0
@@ -15,19 +15,19 @@ variables:
     PRIVATE_ROUTE_NAME:
         required: true
         description: the name to give to the private route
-        default: test-private-route
+        default: acceptance-test-private-route
     PRIVATE_SUBNET_NAME:
         required: true
         description: the cloudcoreo name of the private vpc subnets
-        default: test-private-subnet
+        default: acceptance-test-private-subnet
     PUBLIC_ROUTE_NAME:
         required: true
         description: the name to give to the public route
-        default: test-public-route
+        default: acceptance-test-public-route
     PUBLIC_SUBNET_NAME:
         required: true
         description: the cloudcoreo name of the public vpc subnets
-        default: test-public-subnet
+        default: acceptance-test-public-subnet
     SUFFIX:
         required: false
         description: when used will use the value to suffix the names of all converged objects
@@ -96,13 +96,13 @@ variables:
         type: string
         default: "NOT_A_TAG"
     TOMCAT_GROUP_MAXIMUM:
-        default: 1
+        default: 2
         description: Minimum number of instances the autoscale group will launch
         overrides:
         required: true
         type: number
     TOMCAT_GROUP_MINIMUM:
-        default: 1
+        default: 2
         description: Maximum number of instances the autoscale group will launch
         overrides:
         required: true
@@ -140,7 +140,7 @@ variables:
         required: true
         type:
     TOMCAT_NAME:
-        default: tomcat
+        default: ac-cat
         description:
         overrides:
         required: true
