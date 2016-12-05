@@ -95,72 +95,71 @@ variables:
         required: false
         type: string
         default: "NOT_A_TAG"
-  TOMCAT_GROUP_MAXIMUM:
-    default: 1
-    description: Minimum number of instances the autoscale group will launch
-    overrides:
-    required: true
-    type: number
+    TOMCAT_GROUP_MAXIMUM:
+        default: 1
+        description: Minimum number of instances the autoscale group will launch
+        overrides:
+        required: true
+        type: number
   TOMCAT_GROUP_MINIMUM:
-    default: 1
-    description: Maximum number of instances the autoscale group will launch
-    overrides:
-    required: true
-    type: number
+        default: 1
+        description: Maximum number of instances the autoscale group will launch
+        overrides:
+        required: true
+    trueype: number
   TOMCAT_INGRESS_CIDRS:
-    default: 
-        - 0.0.0.0/0
-    description: null
-    overrides: null
-    required: true
-    type: arra
+        default: 
+            - 0.0.0.0/0
+        description: null
+        overrides: null
+        required: true
+        type: arra
   TOMCAT_INGRESS_CIDR_PORTS:
-    default:
-       - 8080
-       - 80
-       - 443
-       - 22
-    description:
-    overrides:
-    required: true
-    type: array
+        default:
+        - 8080
+        - 80
+        - 443
+        - 22
+        description:
+        overrides:
+        required: true
+        type: array
   TOMCAT_INGRESS_GROUP_PORTS:
-    default:
-       - 8080
-       - 80
-       - 443
-    description:
-    overrides:
-    required: true
-    type: array
+        default:
+        - 8080
+        - 80
+        - 443
+        description:
+        overrides:
+        required: true
+        type: array
   TOMCAT_KEYPAIR:
-    default:
-    description:
-    overrides:
-    required: true
-    type:
+        default:
+        description:
+        overrides:
+        required: true
+        type:
   TOMCAT_NAME:
-    default: tomcat
-    description:
-    overrides:
-    required: true
-    type:
+        default: tomcat
+        description:
+        overrides:
+        required: true
+        type:
   TOMCAT_SIZE:
-    default: t2.micro
-    description:
-    overrides:
-    required: true
-    type:
+        default: t2.micro
+        description:
+        overrides:
+        required: true
+        type:
   YUM_REPO_BUCKET:
-    default:
-    description:
-    overrides:
-    required: false
-    type:
+        default:
+        description:
+        overrides:
+        required: false
+        type:
   VPC_CIDR:
-    default: 10.66.0.0/16
-    description: The CIDR to match to locate the VPC that this server is to be created in
-    overrides: null
-    required: true
-    type: string
-
+        default: 10.11.0.0/16
+        description: The CIDR to match to locate the VPC that this server is to be created in
+        overrides: null
+        required: true
+        type: string
