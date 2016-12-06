@@ -163,3 +163,9 @@ variables:
         overrides: null
         required: true
         type: string
+    SUPPRESS_RESOURCES:
+        overrides:
+            - stack-servers-tomcat::VPC_NAME
+            - stack-servers-tomcat::PUBLIC_ROUTE_NAME
+            - stack-servers-tomcat::PUBLIC_SUBNET_NAME
+        default: DO_NOT_RUN
