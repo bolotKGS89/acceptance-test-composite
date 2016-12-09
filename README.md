@@ -24,7 +24,7 @@ This is the CloudCoreo acceptance test composite
 
 ### `VPC_NAME`:
   * description: the name of the VPC
-  * default: test-vpc
+  * default: acceptance-test-vpc
 
 
 ### `VPC_OCTETS`:
@@ -38,22 +38,22 @@ This is the CloudCoreo acceptance test composite
 
 ### `PRIVATE_ROUTE_NAME`:
   * description: the name to give to the private route
-  * default: test-private-route
+  * default: acceptance-test-private-route
 
 
 ### `PRIVATE_SUBNET_NAME`:
   * description: the cloudcoreo name of the private vpc subnets
-  * default: test-private-subnet
+  * default: acceptance-test-private-subnet
 
 
 ### `PUBLIC_ROUTE_NAME`:
   * description: the name to give to the public route
-  * default: test-public-route
+  * default: acceptance-test-public-route
 
 
 ### `PUBLIC_SUBNET_NAME`:
   * description: the cloudcoreo name of the public vpc subnets
-  * default: test-public-subnet
+  * default: acceptance-test-public-subnet
 
 
 ### `AUDIT_AWS_CLOUDTRAIL_ALERT_LIST`:
@@ -86,11 +86,11 @@ This is the CloudCoreo acceptance test composite
 
 ### `TOMCAT_GROUP_MAXIMUM`:
   * description: Minimum number of instances the autoscale group will launch
-  * default: 1
+  * default: 2
 
 ### `TOMCAT_GROUP_MINIMUM`:
   * description: Maximum number of instances the autoscale group will launch
-  * default: 1
+  * default: 2
 
 ### `TOMCAT_INGRESS_CIDRS`:
   * description: 
@@ -106,7 +106,7 @@ This is the CloudCoreo acceptance test composite
 
 ### `TOMCAT_NAME`:
   * description: 
-  * default: tomcat
+  * default: ac-cat
 
 
 ### `TOMCAT_SIZE`:
