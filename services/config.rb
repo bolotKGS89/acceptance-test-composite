@@ -32,6 +32,7 @@ coreo_aws_vpc_routetable "${PUBLIC_ROUTE_NAME}${SUFFIX}" do
 end
 coreo_aws_vpc_subnet "${PUBLIC_SUBNET_NAME}${SUFFIX}" do
   action :sustain
+  send_on: "change"
   number_of_zones ${PUBLIC_SUBNET_NUM_ZONES}
   percent_of_vpc_allocated 25
   route_table "${PUBLIC_ROUTE_NAME}${SUFFIX}"
