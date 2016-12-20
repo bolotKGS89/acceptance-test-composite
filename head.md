@@ -1,2 +1,0 @@
-acceptance-test-composite
-============================
