@@ -10,3 +10,6 @@
 ##   internet_gateway true
 ## end
 ##
+variables:
+  VAR1:
+    type: string
