@@ -28,6 +28,11 @@ variables:
         required: true
         description: the cloudcoreo name of the public vpc subnets
         default: acceptance-test-public-subnet
+    PUBLIC_SUBNET_NUM_ZONES:
+        default: 1
+        description: the number of public subnet zones
+        required: true
+        type: number
     SUFFIX:
         required: false
         description: when used will use the value to suffix the names of all converged objects
