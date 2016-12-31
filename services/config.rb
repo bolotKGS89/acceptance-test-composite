@@ -39,3 +39,14 @@ coreo_aws_vpc_subnet "${PUBLIC_SUBNET_NAME}${SUFFIX}" do
   map_public_ip_on_launch true
   region "${REGION}"
 end
+
+coreo_uni_util_notify "unresolved-var-notify-badvar" do
+  action :notify
+  type 'email'
+  payload_type 'text'
+  allow_empty true
+  payload '${PRIVATE_SUBNETS_BADVAR}'
+  endpoint ({
+      :to => '${AUDIT_AWS_CLOUDTRAIL_ALERT_RECIPIENT}'
+  })
+end

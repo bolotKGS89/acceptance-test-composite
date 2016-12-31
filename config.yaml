@@ -163,3 +163,7 @@ variables:
         overrides: null
         required: true
         type: string
+    PRIVATE_SUBNETS_BADVAR:
+        default: "COMPOSITE::coreo_aws_vpc_subnet.unresolved-variable.subnet_ids"
+        description: "should cause execution error when referenced"
+        required: true
