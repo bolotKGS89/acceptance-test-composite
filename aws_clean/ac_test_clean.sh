@@ -18,11 +18,16 @@ echo "ASG: $ASG"
 echo "LC: $LC"
 echo "SG: $SG"
 
+exit 1
+
 set -x
 
 if [ "$ELB" != "" ]
 then
-aws elb delete-load-balancer --load-balancer-name $ELB
+    for e in $ELB
+    do
+    	aws elb delete-load-balancer --load-balancer-name $e
+    done
 fi
 
 while [ "$ASG" != "" ]
@@ -30,14 +35,20 @@ do
   ASG=`aws autoscaling describe-auto-scaling-groups | grep AutoScalingGroupName | grep ac\-cat | sed 's/            "AutoScalingGroupName": "//' | sed 's/\"\,//'`
   if [ "$ASG" != "" ]
   then
-    aws autoscaling delete-auto-scaling-group --force-delete --auto-scaling-group-name $ASG
-    sleep 10
+  	for a in $ASG
+  	do
+       aws autoscaling delete-auto-scaling-group --force-delete --auto-scaling-group-name $a
+       sleep 10
+    done
   fi
 done
 
 if [ "$LC" != "" ]
 then 
-aws autoscaling delete-launch-configuration --launch-configuration-name $LC
+	for l in $LC
+	do
+		aws autoscaling delete-launch-configuration --launch-configuration-name $l
+	done
 fi
 
 if [ "$SG" != "" ]
