@@ -68,6 +68,9 @@ for role in $IAM_ROLES; do
 done
 fi
 
+sleep 20
+
+
 
 
 
