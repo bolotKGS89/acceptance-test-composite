@@ -18,8 +18,6 @@ echo "ASG: $ASG"
 echo "LC: $LC"
 echo "SG: $SG"
 
-exit 1
-
 set -x
 
 if [ "$ELB" != "" ]
@@ -58,12 +56,17 @@ for sg in $SG; do
 done
 fi
 
-#if [ "$IAM_ROLES" != "" ]
-#then
-#for role in $IAM_ROLES; do
-#  aws iam delete-role --role-name $role
-#done
-#fi
+if [ "$IAM_ROLES" != "" ]
+then
+for role in $IAM_ROLES; do
+  # instnace profile name and role name are the same
+  #aws iam list-instance-profiles-for-role --role-name $role
+  aws iam remove-role-from-instance-profile --instance-profile-name $role --role-name $role
+  aws iam delete-instance-profile --instance-profile-name $role
+  aws iam delete-role-policy --role-name $role --policy-name $role
+  aws iam delete-role --role-name $role
+done
+fi
 
 
 
