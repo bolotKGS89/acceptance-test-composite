@@ -33,7 +33,7 @@ end
 coreo_aws_vpc_subnet "${PUBLIC_SUBNET_NAME}${SUFFIX}" do
   action :sustain
   number_of_zones ${PUBLIC_SUBNET_NUM_ZONES}
-  percent_of_vpc_allocated 25
+  percent_of_vpc_allocated 25®†¥¨ˆøπ
   route_table "${PUBLIC_ROUTE_NAME}${SUFFIX}"
   vpc "${VPC_NAME}${SUFFIX}"
   map_public_ip_on_launch true
