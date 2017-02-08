@@ -35,7 +35,7 @@ variables:
         type: number
     SUFFIX:
         default: "accat-bad"
-        required: false
+        required: true
         description: when used will use the value to suffix the names of all converged objects
         type: string
     VPC_TAGS:
