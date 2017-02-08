@@ -34,6 +34,7 @@ variables:
         required: true
         type: number
     SUFFIX:
+        default: accat-bad
         required: false
         description: when used will use the value to suffix the names of all converged objects
         type: string
