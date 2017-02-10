@@ -13,8 +13,8 @@ This is the CloudCoreo acceptance test composite
 
 ## Required variables with no default
 
-### `AUDIT_AWS_CLOUDTRAIL_ALERT_RECIPIENT_2`:
-  * description: Enter the email address(es) that will receive notifications for objects with no owner tag (Optional, only if owner tag is enabled).
+### `AUDIT_AWS_CLOUDTRAIL_ALERT_RECIPIENT`:
+  * description: Enter the email address(es) that will receive notifications. If more than one, separate each with a comma.
 
 ### `TOMCAT_KEYPAIR`:
   * description: 
@@ -56,6 +56,10 @@ This is the CloudCoreo acceptance test composite
   * default: acceptance-test-public-subnet
 
 
+### `PUBLIC_SUBNET_NUM_ZONES`:
+  * description: the number of public subnet zones
+  * default: 1
+
 ### `AUDIT_AWS_CLOUDTRAIL_ALERT_LIST`:
   * description: Which alerts would you like to check for? (Default is all Cloudtrail alerts)
   * default: cloudtrail-service-disabled, cloudtrail-trail-with-global
@@ -66,11 +70,7 @@ This is the CloudCoreo acceptance test composite
 
 ### `AUDIT_AWS_CLOUDTRAIL_SEND_ON`:
   * description: Send reports always or only when there is a change? Options - always / change. Default is change.
-  * default: change
-
-### `AUDIT_AWS_CLOUDTRAIL_FULL_JSON_REPORT`:
-  * description: Would you like to send the full JSON report? Options - notify / nothing. Default is notify.
-  * default: nothing
+  * default: always
 
 ### `AUDIT_AWS_CLOUDTRAIL_REGIONS`:
   * description: List of AWS regions to check. Default is us-east-1,us-west-1,us-west-2.
@@ -80,17 +80,17 @@ This is the CloudCoreo acceptance test composite
   * description: Would you like to send a Summary ELB report? Options - notify / nothing. Default is no / nothing.
   * default: nothing
 
-### `AUDIT_AWS_CLOUDTRAIL_OWNERS_HTML_REPORT`:
+### `AUDIT_AWS_CLOUDTRAIL_HTML_REPORT`:
   * description: notify or nothing
   * default: notify
 
 ### `TOMCAT_GROUP_MAXIMUM`:
   * description: Minimum number of instances the autoscale group will launch
-  * default: 2
+  * default: 1
 
 ### `TOMCAT_GROUP_MINIMUM`:
   * description: Maximum number of instances the autoscale group will launch
-  * default: 2
+  * default: 1
 
 ### `TOMCAT_INGRESS_CIDRS`:
   * description: 
@@ -123,7 +123,7 @@ This is the CloudCoreo acceptance test composite
 
 ### `VPC_TAGS`:
   * description: tags to apply to the vpc
-  * default: 
+  * default: acceptance-test
 
 ### `AUDIT_AWS_CLOUDTRAIL_OWNER_TAG`:
   * description: Enter an AWS tag whose value is an email address of owner of the ELB object. (Optional)
@@ -134,9 +134,6 @@ This is the CloudCoreo acceptance test composite
 
 ### `SUFFIX`:
   * description: when used will use the value to suffix the names of all converged objects
-
-### `AUDIT_AWS_CLOUDTRAIL_ALERT_RECIPIENT`:
-  * description: Enter the email address(es) that will receive notifications. If more than one, separate each with a comma.
 
 ### `YUM_REPO_BUCKET`:
   * description: 
