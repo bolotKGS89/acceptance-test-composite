@@ -38,4 +38,3 @@ coreo_aws_vpc_subnet "${PUBLIC_SUBNET_NAME}${SUFFIX}" do
   vpc "${VPC_NAME}${SUFFIX}"
   map_public_ip_on_launch true
   region "${REGION}"
-end
