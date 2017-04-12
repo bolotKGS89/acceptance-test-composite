@@ -30,7 +30,7 @@ coreo_aws_vpc_routetable "${PUBLIC_ROUTE_NAME}${SUFFIX}" do
   number_of_tables 1
   region "${REGION}"
 end
-coreo_aws_vpc_subnet "${PUBLIC_SUBNET_NAME}${SUFFIX}" do
+coreo_aws_vpc_subnet "${PUBLIC_SUBNET}${SUFFIX}" do
   action :sustain
   number_of_zones ${PUBLIC_SUBNET_NUM_ZONES}
   percent_of_vpc_allocated 25
@@ -38,3 +38,4 @@ coreo_aws_vpc_subnet "${PUBLIC_SUBNET_NAME}${SUFFIX}" do
   vpc "${VPC_NAME}${SUFFIX}"
   map_public_ip_on_launch true
   region "${REGION}"
+end
