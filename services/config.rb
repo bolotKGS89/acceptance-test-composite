@@ -46,4 +46,4 @@ coreo_aws_ec2_instance "${EC2_NAME}" do
     "CC_SOMETHING_ELSE=THAT_OTHER_THING"
     "CC_FAILURE=FAIL"
   ]
-  
+end
