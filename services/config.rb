@@ -39,3 +39,11 @@ coreo_aws_vpc_subnet "${PUBLIC_SUBNET_NAME}${SUFFIX}" do
   map_public_ip_on_launch true
   region "${REGION}"
 end
+coreo_aws_ec2_instance "${EC2_NAME}" do
+  action :define
+  environment_variables [
+    "CC_SOMETHING=THAT_THING",
+    "CC_SOMETHING_ELSE=THAT_OTHER_THING"
+    "CC_FAILURE=FAIL"
+  ]
+  
