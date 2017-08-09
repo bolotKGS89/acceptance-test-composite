@@ -11,9 +11,6 @@
 ## end
 ##
 
-
-# TEMPORARY - COPY THESE FROM BASE STACK SO THEY DONT GET OVERRIDDEN
-#
 coreo_aws_vpc_vpc "${VPC_NAME}${SUFFIX}" do
   action :sustain
   cidr "${VPC_OCTETS}/16"

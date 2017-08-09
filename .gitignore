@@ -1,0 +1,8 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea
+.idea/workspace.xml
+.idea/modules.xml
+.idea/acceptance-test-composite.iml
+.idea/vcs.xml
+.idea/
+.gitignore
